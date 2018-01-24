@@ -1,0 +1,100 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">Example</a>
+      </div>
+      <label style="float:right">abc@gmail.com</label>
+    </div>
+  </nav>
+<div class="container">
+  <div id="loginbox" class="mainbox col-md-6"> 
+    
+    <div class="row">                
+        <div class="iconmelon">
+          <svg viewBox="0 0 32 32">
+            <g filter="">
+              <use xlink:href="#git"></use>
+            </g>
+          </svg>
+        </div>
+    </div>
+    
+    <div class="panel panel-default" >
+        <div class="panel-heading">
+            <div class="panel-title text-center">Student List  <button type="button" class="btn btn-primary pull-right" (click)="addStudent()">Add Student</button></div>
+            
+        </div>     
+       
+        <div class="panel-body" >
+        
+              
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Roll No</th>
+                <th>School Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Abc</td>
+                <td>Abc</td>
+                <td>Abc</td>
+                <td>Abc</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>                     
+    </div>  
+</div>
+<div id="loginbox" class="mainbox col-md-6" [hidden]="!hiddenFourMonth"> 
+    
+    <div class="row">                
+        <div class="iconmelon">
+          <svg viewBox="0 0 32 32">
+            <g filter="">
+              <use xlink:href="#git"></use>
+            </g>
+          </svg>
+        </div>
+    </div>
+    
+    <div class="panel panel-default" >
+        <div class="panel-heading">
+            <div class="panel-title text-center">Add Student </div>
+        </div>
+        <div class="panel-body" >
+            <form name="form" id="form" class="form-horizontal">
+              
+               <div class="input-group">
+                   <input id="name" type="text" class="form-control" name="name"  placeholder="Name" #name>                                        
+               </div>
+
+               <div class="input-group">
+                 <input id="class" type="class" class="form-control" name="class"  placeholder="Class" #class>                                        
+             </div>
+
+               <div class="input-group">
+                   <input id="rollno" type="rollno" class="form-control" name="rollno" placeholder="Roll No" #rollname>
+               </div>   
+
+               <div class="input-group">
+                  <input id="schoolname" type="schoolname" class="form-control" name="schoolname" placeholder="School Name" #schoolname>
+              </div>                                                                 
+
+               <div class="form-group">
+                   <!-- Button -->
+                   <div class="col-sm-12 controls">
+                       <button type="submit" (click)="saveStudent(name.value,class.value,rollno.value,schoolname.value)" class="btn btn-primary pull-left">Save </button>                          
+                   </div>
+                   
+               </div>
+
+           </form>  
+        </div>                     
+    </div>  
+</div>
+</div>
+
